@@ -1,0 +1,135 @@
+\documentclass[pdftex, 12pt, a4paper, twoside]{article} %12 point font
+\usepackage[pdftex]{graphicx} %Images
+\usepackage{lipsum}
+\usepackage[hmargin=2cm,vmargin=2.54cm]{geometry} %2cm margins
+\usepackage[document]{ragged2e} %left justified
+\usepackage{hyperref}
+\usepackage{parskip} %newlines = paragraphs
+
+% packages for references
+\usepackage{cite}
+\usepackage{url}
+
+\renewcommand{\familydefault}{\sfdefault} %Sans serif font - default Computer Modern Sans Serif
+%\usepackage{avant}  %Uncomment to use Avant Garde
+%\usepackage{helvet} %Uncomment to use Helvetica
+%\usepackage{lmodern} %Uncomment to use Latin Modern
+
+%Horizontal Rule Definition
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\linespread{1.15}
+
+%Start new sections on a odd numbered page
+\let\oldsection\section
+\def\section{\cleardoublepage\oldsection}
+
+\begin{document}
+
+\input{./title-page.tex}
+
+%Blank page after title page
+\pagenumbering{gobble} % Turn off page numbering temporarily
+\thispagestyle{plain} % Skip any headers
+\clearpage\mbox{}\clearpage 
+
+%Turn page numbering back on
+\pagenumbering{roman}
+
+
+
+
+%-----------------------------------%
+% SUMMARY
+%-----------------------------------%
+
+%rename abstract to summary
+\renewcommand{\abstractname}{Summary}
+\begin{abstract}
+A brief summary (no more than 300 words) of the whole report; nature of organisation, type of work done, skills learned, conclusions drawn.
+
+\lipsum[1-2]
+\end{abstract}
+
+%-----------------------------------%
+% ACKNOWLEDGEMENTS
+%-----------------------------------%
+\section*{Acknowledgements}
+To thank the people who have given you help in your work.
+
+\lipsum[1-2]
+
+
+%-----------------------------------%
+% TABLE OF CONTENTS
+%-----------------------------------%
+
+%rename table of contents (before it was just Contents)
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\listoffigures
+\listoftables\cleardoublepage
+
+
+%restart page numbering and change to numbers
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+%-----------------------------------%
+% INTRODUCTION
+%-----------------------------------%
+\section{Introduction}
+\label{sec:introduction}
+Outline the nature of the enterprise and/or products of the employer.
+\lipsum[1-2]
+
+
+%-----------------------------------%
+% EARLY SECTIONS
+%-----------------------------------%
+\section{!Early Sections!}
+\label{sec:earlysection}
+These sections could include information on:
+
+Layout of works or plant.
+Staff organisation structure and number of employees engaged in various work.
+General comments on buildings, plant layout, technical facilities and amenities for staff.
+\lipsum[1-2]
+
+
+%-----------------------------------%
+% CENTRAL SECTION
+%-----------------------------------%
+\section{!Central Section!}
+\label{sec:centralsection}
+In this section you should provide a full description of the work you undertook and any other activities observed.
+\lipsum[1-2]
+
+
+%-----------------------------------%
+% REFLECTIVE APPRAISAL
+%-----------------------------------%
+\section{Reflective Appraisal}
+\label{sec:reflectiveappraisal}
+In this section you should critically appraise or evaluate your learning/knowledge gained within the practical work experience. This could include
+your impressions about the organisation and its performance. It would also be appropriate to comment on the skills you have developed and the lessons learnt in relation to professional engineering practice.
+\lipsum[1-2]
+
+
+%-----------------------------------%
+% CONCLUSIONS
+%-----------------------------------%
+\section{Conclusions}
+\label{sec:conclusions}
+Summary list of conclusions drawn, skills learned.
+\lipsum[1-2]
+
+%Uncomment for bibliography
+%\bibliographystyle{IEEEtran}
+%\bibliography{bib-file-name}
+
+%Uncomment for appendix
+%\appendix
+%\section{!Appendix Name!}
+
+\end{document}
