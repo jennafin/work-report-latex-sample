@@ -10,6 +10,9 @@
 \usepackage{cite}
 \usepackage{url}
 
+\renewcommand*\thesection{\arabic{section}.0}
+\renewcommand*\thesubsection{\arabic{section}.\arabic{subsection}}
+
 \renewcommand{\familydefault}{\sfdefault} %Sans serif font - default Computer Modern Sans Serif
 %\usepackage{avant}  %Uncomment to use Avant Garde
 %\usepackage{helvet} %Uncomment to use Helvetica
@@ -87,7 +90,7 @@ Outline the nature of the enterprise and/or products of the employer.
 %-----------------------------------%
 % EARLY SECTIONS
 %-----------------------------------%
-\section{!Early Sections!}
+\section{!Early Sections1!}
 \label{sec:earlysection}
 These sections could include information on:
 
@@ -96,6 +99,8 @@ Staff organisation structure and number of employees engaged in various work.
 General comments on buildings, plant layout, technical facilities and amenities for staff.
 \lipsum[1-2]
 
+\subsection{!Early SubSection1!}
+\lipsum[1-2]
 
 %-----------------------------------%
 % CENTRAL SECTION
@@ -103,6 +108,12 @@ General comments on buildings, plant layout, technical facilities and amenities 
 \section{!Central Section!}
 \label{sec:centralsection}
 In this section you should provide a full description of the work you undertook and any other activities observed.
+\lipsum[1-2]
+
+\subsection{!Central SubSection1!}
+\lipsum[1-2]
+
+\subsection{!Central SubSection2!}
 \lipsum[1-2]
 
 
